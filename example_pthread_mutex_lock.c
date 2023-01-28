@@ -18,8 +18,8 @@ void *thread2_function(){
     while(1){
         pthread_mutex_lock(&lock); //Acquire lock before accessing shared variable
         shared_variable--; //Decrement shared variable
-        printf("Thread 2: shared_variable = %d\n", shared_variable); //Release lock after accessing shared variable
-        pthread_mutex_unlock(&lock);
+        printf("Thread 2: shared_variable = %d\n", shared_variable); 
+        pthread_mutex_unlock(&lock); //Release lock after accessing shared variable
     }
     pthread_exit(NULL);
 }
