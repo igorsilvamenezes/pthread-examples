@@ -6,31 +6,31 @@ pthread_barrier_t barrier;
 
 void *thread1_func(void *arg)
 {
-    printf("Thread 1 processing for 7 seconds.\n");
+    printf("Thread 1 starting...\n");
     sleep(7);
-    printf("Thread 1 done processing, wait for barrier.\n");
+    printf("Thread 1 reached the barrier...\n");
     pthread_barrier_wait(&barrier);
-    printf("Thread 1 finished.\n");
+    printf("Thread 1 passed the barrier...\n");
     return NULL;
 }
 
 void *thread2_func(void *arg)
 {
-    printf("Thread 2 processing for 3 seconds.\n");
+    printf("Thread 2 starting...\n");
     sleep(3);
-    printf("Thread 2 done processing, wait for barrier.\n");
+    printf("Thread 2 reached the barrier...\n");
     pthread_barrier_wait(&barrier);
-    printf("Thread 2 finished.\n");
+    printf("Thread 2 passed the barrier...\n");
     return NULL;
 }
 
 void *thread3_func(void *args)
 {
-    printf("Thread 3 processing for 5 seconds.\n");
+    printf("Thread 3 starting...\n");
     sleep(5);
-    printf("Thread 3 done processing, wait for barrier.\n");
+    printf("Thread 3 reached the barrier...\n");
     pthread_barrier_wait(&barrier);
-    printf("Thread 3 finished.\n");
+    printf("Thread 2 passed the barrier...\n");
     return NULL;
 }
 
